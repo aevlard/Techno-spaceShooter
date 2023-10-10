@@ -39,5 +39,9 @@ public class GameMenuManager : MonoBehaviour
         SceneManager.LoadScene("GameMenu_Antoine");
     }
 
+    public void PlaySoundButton()
+    {
+        GetComponent<AudioSource>().Play();
+    }
 
 }

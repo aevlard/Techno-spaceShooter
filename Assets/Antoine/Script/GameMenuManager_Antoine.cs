@@ -9,9 +9,15 @@ public class GameMenuManager_Antoine : MonoBehaviour
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject creditsMenu;
 
-    // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+
+    }
     void Start()
     {
+
         OpenMenu(mainMenu);
     }
 
@@ -35,7 +41,7 @@ public class GameMenuManager_Antoine : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameMenu_Antoine");
+        SceneManager.LoadScene("Antoine_Scene");
     }
 
 }
