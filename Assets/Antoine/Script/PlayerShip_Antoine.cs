@@ -25,13 +25,14 @@ public class PlayerShip_Antoine : InputListenerBase
 
     private PlayerShoot_Antoine playerShoot_Antoine;
 
+    public float LeftBoundary { get => leftBoundary; set => leftBoundary = value; }
+    public float RightBoundary { get => rightBoundary; set => rightBoundary = value; }
+    public float TopBoundary { get => topBoundary; set => topBoundary = value; }
+    public float BottomBoundary { get => bottomBoundary; set => bottomBoundary = value; }
+
     private void Awake()
     {
-        leftBoundary = -Camera.main.orthographicSize * Camera.main.aspect;
-        rightBoundary = Camera.main.orthographicSize * Camera.main.aspect;
-        topBoundary = Camera.main.orthographicSize;
-        bottomBoundary = -Camera.main.orthographicSize;
-
+        InitializeBoundary();
         playerShoot_Antoine = GetComponent<PlayerShoot_Antoine>();
     }
 
@@ -106,7 +107,21 @@ public class PlayerShip_Antoine : InputListenerBase
         }
     }
 
+    public override void ProcessMouseButtonDown(int _button)
+    {
+        if (_button == 0)
+        {
+            playerShoot_Antoine.Shoot();
+        }
+    }
 
+    public override void ProcessMouseButtonUp(int _button)
+    {
+        if (_button == 0)
+        {
+            playerShoot_Antoine.StopShooting();
+        }
+    }
 
     private void CheckScreenBounds(Vector3 newPosition)
     {
@@ -152,24 +167,13 @@ public class PlayerShip_Antoine : InputListenerBase
         transform.position = newPosition;
     }
 
-
-
-    public override void ProcessMouseButtonDown(int _button)
+    public void InitializeBoundary()
     {
-        if (_button == 0)
-        {
-            playerShoot_Antoine.Shoot();
-        }
+
+        leftBoundary = -Camera.main.orthographicSize * Camera.main.aspect;
+        rightBoundary = Camera.main.orthographicSize * Camera.main.aspect;
+        topBoundary = Camera.main.orthographicSize;
+        bottomBoundary = -Camera.main.orthographicSize;
+
     }
-
-    public override void ProcessMouseButtonUp(int _button)
-    {
-        if (_button == 0)
-        {
-            playerShoot_Antoine.StopShooting();
-        }
-    }
-
-    
-
 }
