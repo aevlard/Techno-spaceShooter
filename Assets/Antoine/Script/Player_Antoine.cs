@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ufo_Antoine : EnemyBase_Antoine
+public class Player_Antoine : EnemyBase_Antoine
 {
-
     [SerializeField] private int health = 100;
 
     public override void Die()
@@ -14,7 +13,7 @@ public class Ufo_Antoine : EnemyBase_Antoine
 
     public override void Parler()
     {
-        Debug.Log("Je suis un UFO");
+        Debug.Log("Je suis un astéroid");
     }
 
     public override void TakeDamage(int damage)

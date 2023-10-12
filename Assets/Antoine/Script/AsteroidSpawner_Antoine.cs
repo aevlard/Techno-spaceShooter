@@ -22,7 +22,7 @@ public class AsteroidSpawner_Antoine : MonoBehaviour
 
         playerShip_Antoine.InitializeBoundary();
 
-        for (int i = 0; i < 0; i++)
+        for (int i = 0; i < 3; i++)
         {
             GenerateAsteroidFromTop();
             GenerateAsteroidFromBottom();

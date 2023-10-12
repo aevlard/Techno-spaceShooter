@@ -176,4 +176,22 @@ public class PlayerShip_Antoine : InputListenerBase
         bottomBoundary = -Camera.main.orthographicSize;
 
     }
+
+    public void ImpactEffect()
+    {
+        accelerationTimer = 0f;
+        decelerationTimer += Time.deltaTime;
+        currentSpeed = 0f;
+
+        // Calculez la direction du recul (dans cet exemple, on utilise l'opposé de la direction actuelle du vaisseau).
+        Vector3 impactDirection = -transform.up; // Utilisez la direction actuelle du vaisseau.
+
+        // Appliquez un recul en fonction de la direction du recul.
+        float impactForce = 100f; // Ajustez la force d'impact selon vos besoins.
+
+        Vector3 newPosition = transform.position + impactDirection * impactForce * Time.fixedDeltaTime;
+        transform.position = newPosition;
+
+    }
+
 }

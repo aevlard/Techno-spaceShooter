@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4444045329741514108}
   - component: {fileID: 1689023550093762973}
   - component: {fileID: 8285237312245288653}
-  - component: {fileID: 8746994516197137497}
+  - component: {fileID: 9194583075970433686}
   m_Layer: 0
   m_Name: LaserPrefab_Antoine
   m_TagString: Untagged
@@ -149,7 +149,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.13, y: 0.57}
   m_Direction: 0
---- !u!114 &8746994516197137497
+--- !u!114 &9194583075970433686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,6 +158,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8835287498823354089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ba53d74031229409dfd98cc17bb11f, type: 3}
+  m_Script: {fileID: 11500000, guid: b8e77769cb4ce57428cc436f63140d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
